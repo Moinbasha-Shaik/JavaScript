@@ -1,0 +1,25 @@
+
+function helloWorld() {
+    console.log("Hello World");
+}
+helloWorld();
+
+function sum(x,y){
+    var res=x+y
+    console.log(res)
+}
+
+
+
+// sum("shaik",2)
+
+function f1(ff){
+    console.log(ff)
+    ff();
+}
+
+//f1(2323);
+f1(function (){
+    var a ="hello from anonomous function"
+    console.log(a);
+});
