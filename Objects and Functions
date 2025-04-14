@@ -1,0 +1,109 @@
+var emp={
+    name:"shaik",
+    age:20,
+    job:"developer",
+    salary:"2.75",
+    cname:"tekworks",
+    
+}
+
+console.log(emp);
+emp.id="1";
+emp.job="Backend Developer"
+console.log(emp);
+delete emp.job;
+console.log(emp);
+
+
+//hello world
+function helloWorld() {
+    console.log("Hello World");
+}
+helloWorld();
+
+function sum(x,y){
+    var res=x+y
+    console.log(res)
+}
+
+
+
+// sum("shaik",2)
+
+function f1(ff){
+    console.log(ff)
+    ff();
+}
+
+//f1(2323);
+f1(function (){
+    var a ="hello from anonomous function"
+    console.log(a);
+});
+
+
+
+function print(){
+    console.log("hello from print function")
+}
+
+function add(x,y){
+    console.log(x+y);
+}
+
+function fn(f){
+    f(4,5);
+    f(5,34);
+    f(783,34);
+
+    
+    console.log("completed-------------")
+}
+
+
+fn(function(){
+    console.log('this is anonomous function');
+})
+
+
+
+fn(print);
+
+fn(add);
+
+
+
+
+// deno-lint-ignore-file
+// let fun=function(){
+//     console.log("this is Anonomous function")
+// }
+
+// fun();
+
+// (function(){
+//     console.log("this is Anonomous function")
+// })
+// ();
+
+// function myfun(x,y){
+//     return x+y;
+// }
+
+// var res=myfun(10,20);
+// console.log(res);
+
+
+
+function myfun(x,y){
+    var sum=x+y;
+
+    
+    return function(){
+        console.log(sum)
+    };
+}
+
+var res=myfun(10,30)
+console.log(res)
+res();
